@@ -41,17 +41,15 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="jLabel5" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jLabel3" max="32767" attributes="0"/>
-                          <Component id="jLabel1" pref="105" max="32767" attributes="0"/>
-                      </Group>
+                      <Component id="airWindLabel" max="32767" attributes="0"/>
+                      <Component id="airSpeedLabel" max="32767" attributes="0"/>
+                      <Component id="airTempLabel" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="airTempLabel" max="32767" attributes="0"/>
-                      <Component id="airSpeedLabel" pref="151" max="32767" attributes="0"/>
-                      <Component id="airWindLabel" max="32767" attributes="0"/>
+                      <Component id="airTempIndexLabel" max="32767" attributes="0"/>
+                      <Component id="airSpeedIndexLabel" pref="151" max="32767" attributes="0"/>
+                      <Component id="airWindIndexLabel" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace pref="67" max="32767" attributes="0"/>
               </Group>
@@ -62,18 +60,18 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel1" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                       <Component id="airTempLabel" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                      <Component id="airTempIndexLabel" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel3" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                       <Component id="airSpeedLabel" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                      <Component id="airSpeedIndexLabel" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel5" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                       <Component id="airWindLabel" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                      <Component id="airWindIndexLabel" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="66" max="32767" attributes="0"/>
               </Group>
@@ -81,32 +79,32 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="airTempLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="Temperature:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="airTempLabel">
+        <Component class="javax.swing.JLabel" name="airTempIndexLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="27"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel3">
+        <Component class="javax.swing.JLabel" name="airSpeedLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="Speed:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="airSpeedLabel">
+        <Component class="javax.swing.JLabel" name="airSpeedIndexLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="30km/h"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel5">
+        <Component class="javax.swing.JLabel" name="airWindLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="Wind Conditional:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="airWindLabel">
+        <Component class="javax.swing.JLabel" name="airWindIndexLabel">
           <Properties>
             <Property name="text" type="java.lang.String" value="Left"/>
           </Properties>

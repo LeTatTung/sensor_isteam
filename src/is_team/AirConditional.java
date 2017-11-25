@@ -29,26 +29,26 @@ public class AirConditional extends javax.swing.JFrame {
     private void initComponents() {
 
         airPanel = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         airTempLabel = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        airTempIndexLabel = new javax.swing.JLabel();
         airSpeedLabel = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        airSpeedIndexLabel = new javax.swing.JLabel();
         airWindLabel = new javax.swing.JLabel();
+        airWindIndexLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Temperature:");
+        airTempLabel.setText("Temperature:");
 
-        airTempLabel.setText("27");
+        airTempIndexLabel.setText("27");
 
-        jLabel3.setText("Speed:");
+        airSpeedLabel.setText("Speed:");
 
-        airSpeedLabel.setText("30km/h");
+        airSpeedIndexLabel.setText("30km/h");
 
-        jLabel5.setText("Wind Conditional:");
+        airWindLabel.setText("Wind Conditional:");
 
-        airWindLabel.setText("Left");
+        airWindIndexLabel.setText("Left");
 
         javax.swing.GroupLayout airPanelLayout = new javax.swing.GroupLayout(airPanel);
         airPanel.setLayout(airPanelLayout);
@@ -57,15 +57,14 @@ public class AirConditional extends javax.swing.JFrame {
             .addGroup(airPanelLayout.createSequentialGroup()
                 .addGap(36, 36, 36)
                 .addGroup(airPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(airPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 105, Short.MAX_VALUE)))
+                    .addComponent(airWindLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(airSpeedLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(airTempLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(26, 26, 26)
                 .addGroup(airPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(airTempLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(airSpeedLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
-                    .addComponent(airWindLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(airTempIndexLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(airSpeedIndexLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 151, Short.MAX_VALUE)
+                    .addComponent(airWindIndexLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(67, Short.MAX_VALUE))
         );
         airPanelLayout.setVerticalGroup(
@@ -73,16 +72,16 @@ public class AirConditional extends javax.swing.JFrame {
             .addGroup(airPanelLayout.createSequentialGroup()
                 .addGap(39, 39, 39)
                 .addGroup(airPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(airTempLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(airTempLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(airTempIndexLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(43, 43, 43)
                 .addGroup(airPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(airSpeedLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(airSpeedLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(airSpeedIndexLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(63, 63, 63)
                 .addGroup(airPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(airWindLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(airWindLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(airWindIndexLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(66, Short.MAX_VALUE))
         );
 
@@ -137,11 +136,11 @@ public class AirConditional extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel airPanel;
+    private javax.swing.JLabel airSpeedIndexLabel;
     private javax.swing.JLabel airSpeedLabel;
+    private javax.swing.JLabel airTempIndexLabel;
     private javax.swing.JLabel airTempLabel;
+    private javax.swing.JLabel airWindIndexLabel;
     private javax.swing.JLabel airWindLabel;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
     // End of variables declaration//GEN-END:variables
 }
