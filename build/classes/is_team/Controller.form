@@ -51,7 +51,7 @@
                                   <Component id="controllerStateLabel" min="-2" pref="61" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace min="0" pref="32" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="28" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
@@ -196,32 +196,32 @@
         </Component>
         <Component class="javax.swing.JLabel" name="controllerSpeedLeftLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="0km/h"/>
+            <Property name="text" type="java.lang.String" value="20km/h"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="controllerSpeedMiddleLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="50km/h"/>
+            <Property name="text" type="java.lang.String" value="30km/h"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="controllerSpeedRightLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="100km/h"/>
+            <Property name="text" type="java.lang.String" value="40km/h"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="controllerTempLeftLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="0&#x2103;"/>
+            <Property name="text" type="java.lang.String" value="10&#x2103;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="controllerTempMiddleLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="25&#x2103;"/>
+            <Property name="text" type="java.lang.String" value="20&#x2103;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="controllerTempRightLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="50&#x2103;"/>
+            <Property name="text" type="java.lang.String" value="30&#x2103;"/>
           </Properties>
         </Component>
       </SubComponents>
