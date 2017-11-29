@@ -124,17 +124,17 @@
         </Component>
         <Component class="javax.swing.JLabel" name="sensorTempLeftLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="0&#x2103;"/>
+            <Property name="text" type="java.lang.String" value="10&#x2103;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="sensorTempMiddleLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="25&#x2103;"/>
+            <Property name="text" type="java.lang.String" value="20&#x2103;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="sensorTempRightLabel">
           <Properties>
-            <Property name="text" type="java.lang.String" value="50&#x2103;"/>
+            <Property name="text" type="java.lang.String" value="30&#x2103;"/>
           </Properties>
         </Component>
       </SubComponents>

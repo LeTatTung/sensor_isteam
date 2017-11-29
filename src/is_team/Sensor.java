@@ -19,7 +19,7 @@ public class Sensor extends javax.swing.JFrame {
     public Sensor() {
         initComponents();
         setTitle("Sensor");
-        createSensorTempSlider();
+        setLimitSensorTempSlider();
     }
 
     /**
@@ -59,11 +59,11 @@ public class Sensor extends javax.swing.JFrame {
             }
         });
 
-        sensorTempLeftLabel.setText("0℃");
+        sensorTempLeftLabel.setText("10℃");
 
-        sensorTempMiddleLabel.setText("25℃");
+        sensorTempMiddleLabel.setText("20℃");
 
-        sensorTempRightLabel.setText("50℃");
+        sensorTempRightLabel.setText("30℃");
 
         javax.swing.GroupLayout sensorPanelLayout = new javax.swing.GroupLayout(sensorPanel);
         sensorPanel.setLayout(sensorPanelLayout);
@@ -138,9 +138,9 @@ public class Sensor extends javax.swing.JFrame {
     private void sensorUserCheckboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sensorUserCheckboxActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_sensorUserCheckboxActionPerformed
-    private void createSensorTempSlider(){
-        sensorTempSlider.setMinimum(0);
-        sensorTempSlider.setMaximum(50);
+    private void setLimitSensorTempSlider(){
+        sensorTempSlider.setMinimum(10);
+        sensorTempSlider.setMaximum(30);
     }
     
     /**

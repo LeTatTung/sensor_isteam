@@ -20,7 +20,9 @@ public class Controller extends javax.swing.JFrame {
     public Controller() {
         initComponents();
         setTitle("Controller");
-        createControllerTempSlider();
+        setLimitControllerTempSlider();
+        setLimitControllerSpeedSlider();
+        setLimitControllerWindSlider();
     }
 
     /**
@@ -81,17 +83,17 @@ public class Controller extends javax.swing.JFrame {
             }
         });
 
-        controllerSpeedLeftLabel.setText("0km/h");
+        controllerSpeedLeftLabel.setText("20km/h");
 
-        controllerSpeedMiddleLabel.setText("50km/h");
+        controllerSpeedMiddleLabel.setText("30km/h");
 
-        controllerSpeedRightLabel.setText("100km/h");
+        controllerSpeedRightLabel.setText("40km/h");
 
-        controllerTempLeftLabel.setText("0℃");
+        controllerTempLeftLabel.setText("10℃");
 
-        controllerTempMiddleLabel.setText("25℃");
+        controllerTempMiddleLabel.setText("20℃");
 
-        controllerTempRightLabel.setText("50℃");
+        controllerTempRightLabel.setText("30℃");
 
         javax.swing.GroupLayout controllerPanelLayout = new javax.swing.GroupLayout(controllerPanel);
         controllerPanel.setLayout(controllerPanelLayout);
@@ -108,7 +110,7 @@ public class Controller extends javax.swing.JFrame {
                             .addGroup(controllerPanelLayout.createSequentialGroup()
                                 .addGap(2, 2, 2)
                                 .addComponent(controllerStateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 32, Short.MAX_VALUE)))
+                        .addGap(0, 28, Short.MAX_VALUE)))
                 .addGap(18, 18, 18)
                 .addGroup(controllerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(controllerPanelLayout.createSequentialGroup()
@@ -190,9 +192,19 @@ public class Controller extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    private void createControllerTempSlider(){
-        controllerTempSlider.setMinimum(0);
-        controllerTempSlider.setMaximum(50);
+    private void setLimitControllerTempSlider(){
+        controllerTempSlider.setMinimum(10);
+        controllerTempSlider.setMaximum(30);
+    }
+    
+    private void setLimitControllerSpeedSlider(){
+        controllerSpeedSlider.setMinimum(20);
+        controllerSpeedSlider.setMaximum(40);
+    }
+        
+    private void setLimitControllerWindSlider(){
+        controllerWindSlider.setMinimum(-60);
+        controllerWindSlider.setMaximum(60);
     }
     
     private void controllerTempSliderStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_controllerTempSliderStateChanged
