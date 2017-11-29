@@ -38,41 +38,71 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="sensorUserLabel" min="-2" pref="95" max="-2" attributes="0"/>
-                      <Component id="sensorTempLabel" min="-2" pref="125" max="-2" attributes="0"/>
+                      <Component id="sensorTempLabel" alignment="0" min="-2" pref="149" max="-2" attributes="0"/>
+                      <Component id="sensorUserLabel" alignment="0" min="-2" pref="95" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="sensorTempSlider" min="-2" pref="253" max="-2" attributes="0"/>
-                      <Component id="sensorUserCheckbox" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="32" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="sensorTempLeftLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
+                          <Component id="sensorTempMiddleLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="sensorTempRightLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="sensorUserCheckbox" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="214" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="sensorTempSlider" min="-2" pref="253" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
                   </Group>
-                  <EmptySpace pref="46" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="sensorTempSlider" max="32767" attributes="0"/>
-                      <Component id="sensorTempLabel" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="sensorTempLabel" min="-2" pref="54" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="sensorTempLeftLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="sensorTempMiddleLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="sensorTempRightLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="sensorTempSlider" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="35" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
-                  <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="sensorUserLabel" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                       <Component id="sensorUserCheckbox" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="58" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
         <Component class="javax.swing.JSlider" name="sensorTempSlider">
+          <Events>
+            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="sensorTempSliderStateChanged"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="sensorTempLabel">
           <Properties>
@@ -87,6 +117,24 @@
         <Component class="javax.swing.JCheckBox" name="sensorUserCheckbox">
           <Properties>
             <Property name="text" type="java.lang.String" value="Yes"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sensorUserCheckboxActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="sensorTempLeftLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="0&#x2103;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="sensorTempMiddleLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="25&#x2103;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="sensorTempRightLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="50&#x2103;"/>
           </Properties>
         </Component>
       </SubComponents>

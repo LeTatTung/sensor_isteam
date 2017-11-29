@@ -40,7 +40,7 @@ public class AirConditional extends javax.swing.JFrame {
 
         airTempLabel.setText("Temperature:");
 
-        airTempIndexLabel.setText("27");
+        airTempIndexLabel.setText("27℃");
 
         airSpeedLabel.setText("Speed:");
 
