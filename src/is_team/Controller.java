@@ -39,11 +39,11 @@ public class Controller extends javax.swing.JFrame {
         controllerStateCheckbox = new javax.swing.JCheckBox();
         controllerSpeedLabel = new javax.swing.JLabel();
         controllerSpeedSlider = new javax.swing.JSlider();
-        controllerWindLabel = new javax.swing.JLabel();
-        controllerWindSlider = new javax.swing.JSlider();
-        controllerWindLeftLabel = new javax.swing.JLabel();
-        controllerWindMiddleLabel = new javax.swing.JLabel();
-        controllerWindRightLabel = new javax.swing.JLabel();
+        controllerDirectionLabel = new javax.swing.JLabel();
+        controllerDirectionSlider = new javax.swing.JSlider();
+        controllerDirectionLeftLabel = new javax.swing.JLabel();
+        controllerDirectionMiddleLabel = new javax.swing.JLabel();
+        controllerDirectionRightLabel = new javax.swing.JLabel();
         controllerTempLabel = new javax.swing.JLabel();
         controllerTempSlider = new javax.swing.JSlider();
         controllerSpeedLeftLabel = new javax.swing.JLabel();
@@ -67,13 +67,19 @@ public class Controller extends javax.swing.JFrame {
             }
         });
 
-        controllerWindLabel.setText("Wind direction: ");
+        controllerDirectionLabel.setText("Direction: ");
 
-        controllerWindLeftLabel.setText("Left");
+        controllerDirectionSlider.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                controllerDirectionSliderStateChanged(evt);
+            }
+        });
 
-        controllerWindMiddleLabel.setText("Middle");
+        controllerDirectionLeftLabel.setText("Left");
 
-        controllerWindRightLabel.setText("Right");
+        controllerDirectionMiddleLabel.setText("Middle");
+
+        controllerDirectionRightLabel.setText("Right");
 
         controllerTempLabel.setText("Temperature:");
 
@@ -102,43 +108,40 @@ public class Controller extends javax.swing.JFrame {
             .addGroup(controllerPanelLayout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addGroup(controllerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(controllerTempLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(controllerTempLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
                     .addComponent(controllerSpeedLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(controllerPanelLayout.createSequentialGroup()
                         .addGroup(controllerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(controllerWindLabel)
+                            .addComponent(controllerDirectionLabel)
                             .addGroup(controllerPanelLayout.createSequentialGroup()
                                 .addGap(2, 2, 2)
                                 .addComponent(controllerStateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 28, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(18, 18, 18)
-                .addGroup(controllerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(controllerPanelLayout.createSequentialGroup()
-                        .addComponent(controllerWindLeftLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(controllerWindMiddleLabel)
-                        .addGap(144, 144, 144)
-                        .addComponent(controllerWindRightLabel))
-                    .addComponent(controllerWindSlider, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(controllerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, controllerPanelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(controllerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(controllerPanelLayout.createSequentialGroup()
-                                .addComponent(controllerTempLeftLabel)
-                                .addGap(164, 164, 164)
-                                .addComponent(controllerTempMiddleLabel)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(controllerTempRightLabel))
-                            .addComponent(controllerStateCheckbox)
-                            .addComponent(controllerSpeedSlider, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(controllerTempSlider, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(controllerPanelLayout.createSequentialGroup()
-                                .addComponent(controllerSpeedLeftLabel)
-                                .addGap(132, 132, 132)
-                                .addComponent(controllerSpeedMiddleLabel)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 128, Short.MAX_VALUE)
-                                .addComponent(controllerSpeedRightLabel)))))
-                .addContainerGap())
+                        .addComponent(controllerTempLeftLabel)
+                        .addGap(159, 159, 159)
+                        .addComponent(controllerTempMiddleLabel)
+                        .addGap(158, 158, 158)
+                        .addComponent(controllerTempRightLabel))
+                    .addComponent(controllerTempSlider, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(controllerStateCheckbox)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, controllerPanelLayout.createSequentialGroup()
+                        .addComponent(controllerDirectionLeftLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(controllerDirectionMiddleLabel)
+                        .addGap(147, 147, 147)
+                        .addComponent(controllerDirectionRightLabel))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, controllerPanelLayout.createSequentialGroup()
+                        .addComponent(controllerSpeedLeftLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(controllerSpeedMiddleLabel)
+                        .addGap(126, 126, 126)
+                        .addComponent(controllerSpeedRightLabel))
+                    .addComponent(controllerSpeedSlider, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(controllerDirectionSlider, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
         controllerPanelLayout.setVerticalGroup(
             controllerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -147,36 +150,40 @@ public class Controller extends javax.swing.JFrame {
                 .addGroup(controllerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(controllerStateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(controllerStateCheckbox))
-                .addGap(18, 18, 18)
-                .addGroup(controllerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(controllerTempLeftLabel)
-                    .addComponent(controllerTempMiddleLabel)
-                    .addComponent(controllerTempRightLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(controllerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(controllerTempSlider, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(controllerTempLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(16, 16, 16)
+                    .addGroup(controllerPanelLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(controllerTempLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(16, 16, 16))
+                    .addGroup(controllerPanelLayout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addGroup(controllerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(controllerTempLeftLabel)
+                            .addComponent(controllerTempMiddleLabel)
+                            .addComponent(controllerTempRightLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(controllerTempSlider, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)))
+                .addGap(19, 19, 19)
                 .addGroup(controllerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(controllerSpeedLeftLabel)
                     .addComponent(controllerSpeedMiddleLabel)
                     .addComponent(controllerSpeedRightLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(controllerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(controllerSpeedLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(controllerSpeedSlider, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(controllerSpeedSlider, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(controllerSpeedLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(37, 37, 37)
                 .addGroup(controllerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(controllerPanelLayout.createSequentialGroup()
-                        .addGroup(controllerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(controllerWindRightLabel)
-                            .addGroup(controllerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(controllerWindLeftLabel)
-                                .addComponent(controllerWindMiddleLabel)))
+                        .addGroup(controllerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(controllerDirectionLeftLabel)
+                            .addComponent(controllerDirectionMiddleLabel)
+                            .addComponent(controllerDirectionRightLabel))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(controllerWindSlider, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(controllerWindLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(21, 21, 21))
+                        .addComponent(controllerDirectionSlider, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(controllerDirectionLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(33, 33, 33))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -195,31 +202,41 @@ public class Controller extends javax.swing.JFrame {
     private void setLimitControllerTempSlider(){
         controllerTempSlider.setMinimum(10);
         controllerTempSlider.setMaximum(30);
+        controllerTempSlider.setValue(20);
     }
     
     private void setLimitControllerSpeedSlider(){
         controllerSpeedSlider.setMinimum(20);
         controllerSpeedSlider.setMaximum(40);
+        controllerSpeedSlider.setValue(30);
     }
         
     private void setLimitControllerWindSlider(){
-        controllerWindSlider.setMinimum(-60);
-        controllerWindSlider.setMaximum(60);
+        controllerDirectionSlider.setMinimum(-60);
+        controllerDirectionSlider.setMaximum(60);
+        controllerDirectionSlider.setValue(0);
     }
     
     private void controllerTempSliderStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_controllerTempSliderStateChanged
         // TODO add your handling code here:
         int currentTemp = ((JSlider)evt.getSource()).getValue();
-        controllerTempLabel.setText("Temperature(" +
+        controllerTempLabel.setText("Temperature (" +
                 String.valueOf(currentTemp)+ "℃): ");
     }//GEN-LAST:event_controllerTempSliderStateChanged
 
     private void controllerSpeedSliderStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_controllerSpeedSliderStateChanged
         // TODO add your handling code here:
         int currentSpeed = ((JSlider)evt.getSource()).getValue();
-        controllerSpeedLabel.setText("Speed(" +
+        controllerSpeedLabel.setText("Speed (" +
                 String.valueOf(currentSpeed)+ "km/h): ");
     }//GEN-LAST:event_controllerSpeedSliderStateChanged
+
+    private void controllerDirectionSliderStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_controllerDirectionSliderStateChanged
+        // TODO add your handling code here:
+        int currentDirection = ((JSlider)evt.getSource()).getValue();
+        controllerDirectionLabel.setText("Direction (" +
+                String.valueOf(currentDirection)+ "°): ");
+    }//GEN-LAST:event_controllerDirectionSliderStateChanged
 
     /**
      * @param args the command line arguments
@@ -257,6 +274,11 @@ public class Controller extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel controllerDirectionLabel;
+    private javax.swing.JLabel controllerDirectionLeftLabel;
+    private javax.swing.JLabel controllerDirectionMiddleLabel;
+    private javax.swing.JLabel controllerDirectionRightLabel;
+    private javax.swing.JSlider controllerDirectionSlider;
     private javax.swing.JPanel controllerPanel;
     private javax.swing.JLabel controllerSpeedLabel;
     private javax.swing.JLabel controllerSpeedLeftLabel;
@@ -270,10 +292,5 @@ public class Controller extends javax.swing.JFrame {
     private javax.swing.JLabel controllerTempMiddleLabel;
     private javax.swing.JLabel controllerTempRightLabel;
     private javax.swing.JSlider controllerTempSlider;
-    private javax.swing.JLabel controllerWindLabel;
-    private javax.swing.JLabel controllerWindLeftLabel;
-    private javax.swing.JLabel controllerWindMiddleLabel;
-    private javax.swing.JLabel controllerWindRightLabel;
-    private javax.swing.JSlider controllerWindSlider;
     // End of variables declaration//GEN-END:variables
 }

@@ -74,40 +74,39 @@ public class Sensor extends javax.swing.JFrame {
                 .addGroup(sensorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(sensorTempLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(sensorUserLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                .addGroup(sensorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(sensorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, sensorPanelLayout.createSequentialGroup()
+                        .addComponent(sensorUserCheckbox)
+                        .addGap(214, 214, 214))
                     .addGroup(sensorPanelLayout.createSequentialGroup()
-                        .addComponent(sensorTempLeftLabel)
-                        .addGap(83, 83, 83)
-                        .addComponent(sensorTempMiddleLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(sensorTempRightLabel)
-                        .addContainerGap())
-                    .addGroup(sensorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, sensorPanelLayout.createSequentialGroup()
-                            .addComponent(sensorUserCheckbox)
-                            .addGap(214, 214, 214))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, sensorPanelLayout.createSequentialGroup()
-                            .addComponent(sensorTempSlider, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addContainerGap()))))
+                        .addGroup(sensorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(sensorTempSlider, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(sensorPanelLayout.createSequentialGroup()
+                                .addComponent(sensorTempLeftLabel)
+                                .addGap(78, 78, 78)
+                                .addComponent(sensorTempMiddleLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(sensorTempRightLabel)))
+                        .addContainerGap())))
         );
         sensorPanelLayout.setVerticalGroup(
             sensorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(sensorPanelLayout.createSequentialGroup()
                 .addGroup(sensorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(sensorPanelLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap(65, Short.MAX_VALUE)
                         .addComponent(sensorTempLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(32, 32, 32))
                     .addGroup(sensorPanelLayout.createSequentialGroup()
-                        .addGap(39, 39, 39)
+                        .addGap(62, 62, 62)
                         .addGroup(sensorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(sensorTempLeftLabel)
                             .addComponent(sensorTempMiddleLabel)
                             .addComponent(sensorTempRightLabel))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(sensorTempSlider, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)))
+                        .addGap(1, 1, 1)
+                        .addComponent(sensorTempSlider, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGroup(sensorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(sensorUserLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(sensorUserCheckbox))
@@ -118,7 +117,9 @@ public class Sensor extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(sensorPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(sensorPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 40, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -131,7 +132,7 @@ public class Sensor extends javax.swing.JFrame {
     private void sensorTempSliderStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sensorTempSliderStateChanged
         // TODO add your handling code here:
         int currentTemp = ((JSlider)evt.getSource()).getValue();
-        sensorTempLabel.setText("Temperature(" +
+        sensorTempLabel.setText("Temperature (" +
                 String.valueOf(currentTemp)+ "℃): ");
     }//GEN-LAST:event_sensorTempSliderStateChanged
 
@@ -141,6 +142,7 @@ public class Sensor extends javax.swing.JFrame {
     private void setLimitSensorTempSlider(){
         sensorTempSlider.setMinimum(10);
         sensorTempSlider.setMaximum(30);
+        sensorTempSlider.setValue(20);
     }
     
     /**
